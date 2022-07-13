@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-primary: #033f47;
+    --color-primary-2: #022a30;
+    --color-brand: rgb(224, 247, 128);
+    --color-brand-2: #deff58;
+    --sidebar-width: 240px;
+    --font-primary: "Bai Jamjuree"
+}
+
+body {
+    font-family: var(--font-primary), sans-serif;
+    color: var(--color-body);
+    background-color: var(--color-primary-2);
+    line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: var(--color-heading)
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease
+}
+
+a:hover {
+    color: var(--color-brand) !important;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 30px;
+}
+
+.btn-brand {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--color-brand);
+}
+
+.btn-brand:hover {
+    background-color: var(--color-primary);
+    color: var(--color-brand);
+    border: 1px solid var(--color-brand);
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-base {
+    background-color: var(--color-primary);
+}
+
+.shadow-effect {
+    transition: all 0.5s ease;
+}
+
+.shadow-effect:hover {
+    box-shadow: -8px 12px 0 rgba(224, 247, 128, 0.2);
+    transform: scale(1.02);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-primary);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* NAvbar */
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand) !important;
+}
+
+.navbar .lab {
+    font-size: 36px;
+}
+
+@media (min-width:992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidebar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.9), rgba(3, 63, 71, 0.9)), url(img/sidebar-img.jpg);
+    }
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+        border-radius: 50%;
+    }
+
+    #content-wrapper {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+/* SKILLS */
+.service {
+    border-radius: 5%;
+    padding: 50px;
+    height: 100%;
+}
+
+/* Portfolio */
+.card-custom {
+    height: 100%;
+    border-radius: 5%;
+}
+
+.card-custom__image img {
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.card-custom__content {
+    padding: 30px;
+}
